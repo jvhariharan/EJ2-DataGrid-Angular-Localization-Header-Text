@@ -1,0 +1,18 @@
+<div>
+  <div>
+      {{ 'Value' | translate }}
+  </div>
+    <ejs-dropdownlist id='ddlelement' #dropDown (change)="onChange($event)" [width]=300 [dataSource]='data' value='en' placeholder='Languages'> </ejs-dropdownlist>
+  <ejs-grid #grid [dataSource]="dataSource">
+    <e-columns>
+      <e-column field="OrderID" [isPrimaryKey]="true">
+      <ng-template #headerTemplate let-data>
+            <div>
+                {{ 'Value' | translate }}
+            </div>
+  </ng-template>
+      </e-column>
+      <e-column field="CustomerID" headerText="{{ 'Value' | translate }}"></e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
